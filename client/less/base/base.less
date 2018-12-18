@@ -1,0 +1,29 @@
+/**
+ * @file 页面基础样式
+ * @Author wangjie19
+ * @Date 2017-12-01 14:35:47
+ * @Last Modified by: wangjie19
+ * @Last Modified time: 2018-01-08 23:10:45
+ */
+
+@import './setting.less';
+@import './reset.less';
+@import './header.less';
+@import './footer.less';
+@import './dialog.less';
+@import './popover.less';
+.main{
+    padding-bottom: 176px;
+}
+.transform(@deg:45deg){
+    transform: rotate(@deg);
+    -ms-transform: rotate(@deg);
+    -webkit-transform: rotate(@deg);
+    -o-transform: rotate(@deg);
+    -moz-transform: rotate(@deg);
+}
+
+.icon-info{
+    background-image:url(../../image/icon_info.png);
+    background-repeat: no-repeat;
+}

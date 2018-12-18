@@ -1,0 +1,19 @@
+<!--htmlcs-disable-->
+<%if(process.env.NODE_ENV == 'development'){%>
+    <script type="text/javascript" src="/reload/reload.js"></script>
+<%}%>
+<div class="footer">
+    我是footer
+</div>
+<script type="text/javascript">
+    /*eslint-disable*/
+    function isIE(ver) {
+        var b = document.createElement('b')
+        b.innerHTML = '<!--[if IE ' + ver + ']><i></i><![endif]-->'
+        return b.getElementsByTagName('i').length === 1
+    }
+
+    if(isIE(5)||isIE(6)||isIE(7)||isIE(8)){
+        alert('抱歉，本站不支持您的浏览器版本，请您升级到IE9及以上版本，或下载chrome、firefox、safari等高速浏览器,谢谢！');
+    }
+</script>

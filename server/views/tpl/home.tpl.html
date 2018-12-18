@@ -1,0 +1,18 @@
+<!--htmlcs-disable-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <%- include('../partials/meta.html')%>
+        <title>express 脚手架</title>
+        <script type="text/javascript">
+            /*eslint-disable*/
+            window.isNotAgree = '<%-(client.isNotAgree || "")%>';
+        </script>
+    </head>
+    <body>
+        <%- include('../partials/header.html',{login:header.login})%>
+        <div>我是首页</div>
+        <%- include('../partials/footer.html',{})%>
+    </body>
+</html>

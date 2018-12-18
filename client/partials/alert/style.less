@@ -1,0 +1,88 @@
+@import '../../less/base/mixin.less';
+@import '../../less/base/daExtend.less';
+@btnColor:#3B94FF;
+.alert-msg{
+    position: absolute;
+    width: 480px;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.20);
+    background-color: white;
+    z-index: 666;
+    border-radius: 6px;
+    padding:50px 35px 25px;
+    .close{
+        &:extend(.close);
+        top:25px;
+        right: 20px;
+    }
+    .content{
+        .left,.right{
+            display: inline-block;
+            vertical-align: top;
+        }
+        .left{
+            width: 20px;
+            margin-right: 10px;
+           .flag{
+                background-image:url(../../image/spirit_alert.png);
+                background-repeat: no-repeat;
+                background-position: 0 -20px;
+                height: 20px;
+                width: 20px;
+                display: block;
+            }
+            .money{
+                background-position: 0 -40px;
+            }
+            .warn{
+                background-position: 0 0;
+            }
+            .success{
+                background-position: 0 -60px;
+            }
+        }
+        .right{
+            width: 370px;
+            h4{
+                height: 16px;
+                line-height: 16px;
+                font-size: 16px;
+                font-family: PingFangSC-Medium;
+                color: #394259;
+            }
+            p{
+                margin-top: 4px;
+                line-height: 21px;
+                font-size: 12px;
+                color: #868E9E;
+            }
+        }
+    }
+    .btn-group{
+        margin-top: 40px;
+        height: 24px;
+        text-align: right;
+        line-height: 24px;
+        margin-bottom: 0;
+        a{
+            .btn(24px,@btnColor,12px,0 20px);
+            margin-left: 10px;
+            &:first-child{
+                margin-left: 0;
+            }
+        }
+        .submit{
+            background: @btnColor;
+            color:white;
+        }
+    }
+}
+.dialog-cover{
+    background-color: black;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    opacity: 0.6;
+    filter:alpha(opacity=60);
+    z-index:665;
+}

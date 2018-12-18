@@ -1,0 +1,110 @@
+@btnColor:#3B94FF;
+@import './mixin.less';
+@import './daExtend.less';
+.dialog{
+    display: none;
+    position: absolute;
+    width: 480px;
+    background: white;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.20);
+    border-radius: 6px;
+    z-index: 999;
+    h3{
+        font-size: 16px;
+        color: #394259;
+        padding: 25px 20px 25px 35px;
+        font-family: PingFangSC-Medium;
+        border-bottom: 1px solid #E1E4EB;
+    }
+    .close{
+        &:extend(.close);
+        top:25px;
+        right: 20px;
+    }
+    .dialog-main{
+        padding: 20px 35px;
+    }
+    .btn-group{
+        height: 24px;
+        text-align: right;
+        margin-bottom: 5px;
+        margin-top: 25px;
+        button{
+            .btn(24px,@btnColor,12px,0 20px);
+            margin-left: 10px;
+            &:first-child{
+                margin-left: 0;
+            }
+        }
+        .submit{
+            background: @btnColor;
+            color:white;
+        }
+    }
+    h4{
+        font-size: 12px;
+        height: 12px;
+        line-height: 12px;
+        color: #5D667A;
+    }
+    textarea,input{
+        margin-top:10px;
+        width: 390px;
+        padding: 10px;
+        font-size: 12px;
+        background: white;
+        border: 1px solid #F0F1F5;
+    }
+    textarea{
+        height: 70px;
+    }
+    .pure-text{
+        margin-top: 26px;
+        height: 24px;
+        line-height: 24px;
+        p{
+            display: inline-block;
+            font-size: 12px;
+            color: #5D667A;
+            line-height: 12px;
+            height: 12px;
+            vertical-align: top;
+        }
+        i{
+            color:#FF6860;
+            font-size: 24px;
+            display: inline-block;
+            height: 24px;
+            line-height: 24px;
+            font-family: DIN-Medium;
+        }
+        .suffix{
+            font-size: 16px;
+            height: 16px;
+            line-height: 16px;
+        }
+    }
+    .more-inputs{
+        h4{
+            margin-top: 20px;
+            &:first-child{
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+.dialog-cover{
+    background-color: black;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    opacity: 0.5;
+    filter:alpha(opacity=50);
+    z-index:665;
+}
+
+.body-disabled,.body-disabled-dialog,.body-disabled-loading,.body-disabled-alert{
+    overflow: hidden !important;
+}
